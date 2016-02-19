@@ -28,6 +28,17 @@ public class RecoveryDemo {
  // INITIALIZE Blocks 0 through 7 in the file demo.tbl 
  // Print for each block: Transaction number, block number and new value 
 
+      for (int i = 0; i < 8; i++) {
+        int newVal = 100 * (i + 1);
+        Block blk = new Block("demo.tbl", i);
+        tx.pin(blk);
+        tx.setInt(blk, 4, newVal);
+        tx.unpin(blk);
+        System.out.println("Transaction number is " + tx.getNum());
+        System.out.println("Block number is " + blk.number());
+        System.out.println("New value is " + newVal);
+      }
+
       tx.commit();
 
      
@@ -75,6 +86,17 @@ class TestA implements Runnable {
    // UPDATE the value at location 4 in block 3 to 4000      
    // Print Transaction number, block number and new value  
 
+      for (int i = 0; i < 4; i++) {
+        int newVal = 1000 * (i + 1);
+        Block blk = new Block("demo.tbl", i);
+        tx1.pin(blk);
+        tx1.setInt(blk, 4, newVal);
+        tx1.unpin(blk);
+        System.out.println("Transaction number is " + tx1.getNum());
+        System.out.println("Block number is " + blk.number());
+        System.out.println("New value is " + newVal);
+      }
+
       tx1.commit();
      }
  }
@@ -93,6 +115,17 @@ class TestB implements Runnable {
       // UPDATE the value at location 4 in block 5 to 6000      
       // Print Transaction number, block number and new value  
 
+      for (int i = 4; i < 6; i++) {
+        int newVal = 1000 * (i + 1);
+        Block blk = new Block("demo.tbl", i);
+        tx.pin(blk);
+        tx.setInt(blk, 4, newVal);
+        tx.unpin(blk);
+        System.out.println("Transaction number is " + tx.getNum());
+        System.out.println("Block number is " + blk.number());
+        System.out.println("New value is " + newVal);
+      }
+
       tx.rollback(); 
   }
  }
@@ -109,6 +142,17 @@ class TestC implements Runnable {
      
       // UPDATE the value at location 4 in block 7 to 8000      
       // Print Transaction number, block number and new value  
+
+      for (int i = 6; i < 8; i++) {
+        int newVal = 1000 * (i + 1);
+        Block blk = new Block("demo.tbl", i);
+        tx.pin(blk);
+        tx.setInt(blk, 4, newVal);
+        tx.unpin(blk);
+        System.out.println("Transaction number is " + tx.getNum());
+        System.out.println("Block number is " + blk.number());
+        System.out.println("New value is " + newVal);
+      }
 
       tx.rollback(); 
   }
