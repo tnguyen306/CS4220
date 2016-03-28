@@ -112,12 +112,7 @@ public class HashIndex implements Index {
         this.searchkey = searchkey;
         // get the real location
         // int insertValue = (int)((IntConstant)searchkey).asJavaVal();
-        int insertValue;
-        try {
-            insertValue = (int)((IntConstant)searchkey).asJavaVal();
-        } catch (ClassCastException e) {
-            insertValue = searchkey.hashCode();
-        }
+        int insertValue = searchkey.hashCode();
 
         // System.out.println("!!!!!!!!");
         // System.out.println(insertValue);
@@ -275,12 +270,7 @@ public class HashIndex implements Index {
 		ts.setVal("dataval", val);
         ts.close();
 
-        int insertValue;
-        try {
-            insertValue = (int)((IntConstant)val).asJavaVal();
-        } catch (ClassCastException e) {
-            insertValue = val.hashCode();
-        }
+        int insertValue = val.hashCode();
 
         int insertBucket = insertValue % (pow(level));
         if (insertBucket < nextB) {

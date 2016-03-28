@@ -11,3 +11,69 @@ The HashIndex.java file is implemented with linear hashing.
 The testLinearHashing.java is for the testing purpose of the messy.tbl file.
 
 I also change the TableScan.java to have the method getName() to get the name of file.
+
+BUILD LINEAR HASH INDEX
+new transaction: 2
+ 
+Before expand
+Bucket # is 0
+[ 101 102 103 104 105 ]
+Overflow for Bucket
+[ 106 ]
+value for Level is: 0
+value for Next is: 0
+After expand
+Bucket # is 0
+[ 102 104 106 ]
+Bucket # is 1
+[ 101 103 105 ]
+value for Level is: 1
+value for Next is: 0
+ 
+ 
+Before expand
+Bucket # is 0
+[ 102 104 106 108 110 ]
+Bucket # is 1
+[ 101 103 105 107 109 ]
+Overflow for Bucket
+[ 111 ]
+value for Level is: 1
+value for Next is: 0
+After expand
+Bucket # is 0
+[ 104 108 ]
+Bucket # is 1
+[ 101 103 105 107 109 ]
+Overflow for Bucket
+[ 111 ]
+Bucket # is 2
+[ 102 106 110 ]
+value for Level is: 1
+value for Next is: 1
+ 
+ 
+Before expand
+Bucket # is 0
+[ 104 108 112 ]
+Bucket # is 1
+[ 101 103 105 107 109 ]
+Overflow for Bucket
+[ 111 113 ]
+Bucket # is 2
+[ 102 106 110 ]
+value for Level is: 1
+value for Next is: 1
+After expand
+Bucket # is 0
+[ 104 108 112 ]
+Bucket # is 1
+[ 101 105 109 113 ]
+Bucket # is 2
+[ 102 106 110 ]
+Bucket # is 3
+[ 103 107 111 ]
+value for Level is: 2
+value for Next is: 0
+ 
+transaction 2 rolled back
