@@ -1,0 +1,13 @@
+Shizhe Chen
+schen381
+903002062
+
+Thomas Nguyen
+tnguyen306
+902779009
+
+The HashIndex.java file is implemented with linear hashing.
+
+The testLinearHashing.java is for the testing purpose of the messy.tbl file.
+
+I also change the TableScan.java to have the method getName() to get the name of file.
