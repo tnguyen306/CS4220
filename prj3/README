@@ -1,0 +1,227 @@
+Shizhe Chen
+schen381
+903002062
+
+Thomas Nguyen
+tnguyen306
+902779009
+
+The SortPlan.java file is modified to accept 3 or 4 temp tables.(mergeThreeRun && mergeFourRun)
+
+The SortScan.java is is modified so that it can handle 3 or 4 runs.
+
+The mergeTest.java is for the testing purpose.
+
+lawn-128-61-57-224:simpledb caesar$ java mergeTest 3
+new transaction: 1
+recovering existing database
+START 1
+COMMIT 2
+START 2
+COMMIT 1
+CHECKPOINT -1
+transaction 1 committed
+new transaction: 2
+Begin MERGE SORT Test With 3 Run Merging
+
+Starting A New Run
+aaa127 127
+
+Starting A New Run
+aaa126 126
+
+Starting A New Run
+aaa125 125
+
+Starting A New Run
+aaa124 124
+
+Starting A New Run
+aaa123 123
+
+Starting A New Run
+aaa122 122
+
+Starting A New Run
+aaa121 121
+
+Starting A New Run
+aaa120 120
+
+Starting A New Run
+aaa119 119
+
+Starting A New Run
+aaa118 118
+
+Starting A New Run
+aaa117 117
+
+Starting A New Run
+aaa116 116
+
+Starting A New Run
+aaa115 115
+
+Starting A New Run
+aaa114 114
+
+Starting A New Run
+aaa113 113
+
+Starting A New Run
+aaa112 112
+
+Starting A New Run
+aaa111 111
+
+Starting A New Run
+aaa110 110
+
+Starting A New Run
+aaa109 109
+
+Starting A New Run
+aaa108 108
+
+Starting A New Run
+aaa107 107
+
+Starting A New Run
+aaa106 106
+
+Starting A New Run
+aaa105 105
+
+Starting A New Run
+aaa104 104
+
+Starting A New Run
+aaa103 103
+
+Starting A New Run
+aaa102 102
+
+Starting A New Run
+aaa101 101
+
+Number of Runs is 27
+
+*********************************
+Merge Iteration 1
+Number of Runs to be Merged is 27
+
+Merged Run
+aaa125 125
+aaa126 126
+aaa127 127
+
+Merged Run
+aaa122 122
+aaa123 123
+aaa124 124
+
+Merged Run
+aaa119 119
+aaa120 120
+aaa121 121
+
+Merged Run
+aaa116 116
+aaa117 117
+aaa118 118
+
+Merged Run
+aaa113 113
+aaa114 114
+aaa115 115
+
+Merged Run
+aaa110 110
+aaa111 111
+aaa112 112
+
+Merged Run
+aaa107 107
+aaa108 108
+aaa109 109
+
+Merged Run
+aaa104 104
+aaa105 105
+aaa106 106
+
+Merged Run
+aaa101 101
+aaa102 102
+aaa103 103
+
+*********************************
+Merge Iteration 2
+Number of Runs to be Merged is 9
+
+Merged Run
+aaa119 119
+aaa120 120
+aaa121 121
+aaa122 122
+aaa123 123
+aaa124 124
+aaa125 125
+aaa126 126
+aaa127 127
+
+Merged Run
+aaa110 110
+aaa111 111
+aaa112 112
+aaa113 113
+aaa114 114
+aaa115 115
+aaa116 116
+aaa117 117
+aaa118 118
+
+Merged Run
+aaa101 101
+aaa102 102
+aaa103 103
+aaa104 104
+aaa105 105
+aaa106 106
+aaa107 107
+aaa108 108
+aaa109 109
+
+
+Sorted Result
+
+ 101
+ 102
+ 103
+ 104
+ 105
+ 106
+ 107
+ 108
+ 109
+ 110
+ 111
+ 112
+ 113
+ 114
+ 115
+ 116
+ 117
+ 118
+ 119
+ 120
+ 121
+ 122
+ 123
+ 124
+ 125
+ 126
+ 127
+transaction 2 committed
+END MERGE SORT TEST
